@@ -7,28 +7,34 @@
     margin: 0;
 }
 
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  height: 100%;
+}
+
 body{
-    min-height: 500px;
-    height: 100vh;
-    margin: 0;
+    min-height: 100%;
     background: linear-gradient(120deg, #d3a5dc, #a77dcc, hsl(278, 52%, 41%), #612486);
     background-repeat: no-repeat;
     background-position: center;
     font-family: 'Lemonada', cursive;
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .todolist{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 400px;
-    height: fit-content;
+    height: 500px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 20px 20px 2px rgba(62, 9, 11, .3);
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .cover .title{
@@ -55,8 +61,18 @@ body{
 }
 
 .content{
+    height: 300px;
     padding: 30px;
-    
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
 }
 
 .content form{
@@ -64,6 +80,7 @@ body{
     justify-content: center;
     margin: 0px 0px 25px 0;
     font-size: 2rem;
+    width: 350px;
 }
 
 .content form input{
@@ -181,9 +198,46 @@ body{
     
 }
 
-.fa-trash-alt{
+.fa-trash-alt,
+.fa-check-circle{
     pointer-events: none;
 }
+
+.slideRemove{
+    transform: translateY(1rem);
+    opacity: 0;
+}
+
+.slideCompleted{
+    transform: translateX(15rem);
+    opacity: 0;
+}
+
+.list{
+    transition: all .3s ease;;
+}
+
+.todo-item{
+    display: inline-block;
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    /* border: none; */
+    position: absolute;
+    top: 285px;
+    left: 530px;
+}
+
+
+
 
 
 

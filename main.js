@@ -41,7 +41,18 @@ function addTodo(event){
     
     if(item.classList[0] === 'trash'){
       const todo = item.parentElement;
-      todo.remove();
+      todo.classList.add('slideRemove');
+      todo.addEventListener('transitionend', ()=>{
+        todo.remove();
+      });
+    }
+
+    if(item.classList[0] === 'completed'){
+      const todo = item.parentElement;
+      todo.classList.add('slideCompleted');
+      todo.addEventListener('transitionend', () => {
+        todo.remove();
+      });
     }
  }
 
