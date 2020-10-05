@@ -230,11 +230,34 @@ select{
     -webkit-appearance: none;
     -moz-appearance: none;
     outline: none;
-    /* border: none; */
-    position: absolute;
-    top: 285px;
-    left: 530px;
+    width: 4.5rem;
+    cursor: pointer;
+    padding: .2em;
 }
+
+.select{
+    position: relative;
+    display: flex;
+    float: right;
+    top: 83%;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.select::after{
+    content: "\25BC";
+    background-color: blueviolet;
+    padding: .2em;
+    font-size: .8rem;
+}
+
+.select:hover::after{
+    background-color: black;
+    color: blueviolet;
+}
+
+
+
 
 
 

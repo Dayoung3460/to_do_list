@@ -1,9 +1,11 @@
 const inputTodo = document.querySelector('.input');
 const addBtn = document.querySelector('.addBtn');
 const lists = document.querySelector('.lists');
+const filterOption = document.querySelector('select');
 
 addBtn.addEventListener("click", addTodo);
 lists.addEventListener("click", deleteOrCompleted);
+filterOption.addEventListener("click", filterTodo);
 
 
 function addTodo(event){
@@ -55,6 +57,24 @@ function addTodo(event){
       });
     }
  }
+
+function filterTodo(e){
+  const todos = lists.childNodes;
+  todos.forEach(function(todo){
+    switch(e.target.value){
+      case "all":
+        todo.style.display = "flex";
+        break;
+      case "completed":
+        if (todo.classList.contains("slideCompleted")){
+          todo.style.display = "flex";
+        } else{
+          todo.style.display = "none";
+        }
+    }
+  });
+}
+
 
 
 
