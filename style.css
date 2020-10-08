@@ -115,7 +115,7 @@ body {
 }
 
 .content input::placeholder {
-  color: #f1e2f3;
+  color: var(--c, #f1e2f3);
 }
 
 .content .lists {
@@ -261,4 +261,29 @@ select {
 .select:hover::after {
   background-color: black;
   color: blueviolet;
+}
+
+.title button {
+  display: flex;
+  position: absolute;
+  left: 0.5em;
+  bottom: 0.5em;
+  background: #612486;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+  padding: 0.3em 0.5em;
+  border-radius: 5em;
+  border: none;
+}
+
+.title button:hover {
+  background-color: ivory;
+  color: #612486;
+}
+
+.title button:focus {
+  outline: none;
 }
