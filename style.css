@@ -119,7 +119,6 @@ body {
 }
 
 .content .lists {
-  overflow: auto;
   padding-left: 0;
   overflow: hidden;
 }
@@ -132,7 +131,7 @@ body {
   float: right;
   cursor: pointer;
   margin-top: 0.4em;
-  margin-left: .7em;
+  margin-left: 0.7em;
   padding: 0;
   border: none;
   background: none;
@@ -198,7 +197,6 @@ body {
   width: 13px;
   height: 20px;
   border-color: rgb(149, 23, 199);
-  /* border: 3px; */
   transform: rotate(45deg) translate(0px, -5px);
 }
 
@@ -230,10 +228,10 @@ body {
   vertical-align: middle;
 }
 
-.todo-item:hover{
+.todo-item:hover {
   text-overflow: clip;
-    white-space: normal;
-    word-break: break-all;
+  white-space: normal;
+  word-break: break-all;
 }
 
 select {
@@ -266,7 +264,7 @@ select {
   color: blueviolet;
 }
 
-.title button {
+.title .removeAll {
   display: flex;
   position: absolute;
   left: 0.5em;
@@ -282,11 +280,28 @@ select {
   border: none;
 }
 
-.title button:hover {
+.title .removeAll:hover {
   background-color: ivory;
   color: #612486;
 }
 
-.title button:focus {
+.title .removeAll:focus {
   outline: none;
+}
+
+.title .github {
+  display: flex;
+  position: absolute;
+  right: 3.7em;
+  bottom: 0.2em;
+  font-size: 1.7rem;
+}
+
+.title .github a {
+  font-size: 1.5rem;
+}
+
+.title .github button {
+  background-color: transparent;
+  border: none;
 }
